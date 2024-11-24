@@ -1,4 +1,4 @@
-libxml2-dev
-libxslt1-dev
-gcc
-python3-dev  # This ensures the Python headers necessary for building extensions
+##libxml2-dev
+##libxslt1-dev
+##gcc
+##python3-dev  # This ensures the Python headers necessary for building extensions
