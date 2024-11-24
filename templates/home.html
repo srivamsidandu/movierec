@@ -10,11 +10,11 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
       rel="stylesheet"
     />
 
@@ -46,6 +46,7 @@
       var films = {{suggestions|tojson}};
     </script>
   </head>
+
   <body id="content" style="font-family: 'Noto Sans JP', sans-serif">
     <div class="ml-container" style="display: block">
       <a
@@ -55,11 +56,13 @@
         title="View source on GitHub"
       >
         <svg
+          data-toggle="tooltip"
+          data-placement="left"
           width="80"
           height="80"
           viewBox="0 0 250 250"
           style="
-            fill: #70b7ff;
+            fill: #e50914;
             color: #fff;
             position: fixed;
             z-index: 100;
@@ -67,6 +70,7 @@
             border: 0;
             right: 0;
           "
+          aria-hidden="true"
         >
           <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
           <path
@@ -82,9 +86,7 @@
           ></path>
         </svg>
       </a>
-      <center>
-        <h1 style="margin-top: 20px">Movie Recommendation System</h1>
-      </center>
+      <center><h1 style="">Movie Recommendation System</h1></center>
       <div
         class="form-group shadow-textarea"
         style="margin-top: 30px; text-align: center; color: white"
@@ -106,17 +108,25 @@
         />
         <br />
       </div>
+
       <div class="form-group" style="text-align: center">
         <button
           class="btn btn-primary btn-block movie-button"
-          style="background-color: #e50914; border-color: #e50914; width: 120px"
+          style="
+            background-color: #e50914;
+            text-align: center;
+            border-color: #e50914;
+            width: 120px;
+          "
+          disabled="true"
         >
-          Enter
-        </button>
-        <br /><br />
+          Enter</button
+        ><br /><br />
       </div>
     </div>
+
     <div id="loader" class="text-center"></div>
+
     <div class="fail">
       <center>
         <h3>
@@ -125,20 +135,24 @@
         </h3>
       </center>
     </div>
+
     <div class="results">
       <center>
         <h2 id="name" class="text-uppercase"></h2>
       </center>
     </div>
-    <div class="footer" style="margin-top: 50px; text-align: center">
+
+    <div class="footer" style="">
       Made with<span style="font-size: 150%; color: red"> &hearts; </span>by
       Kishan
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.1.0/dist/js/autoComplete.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
     <script
       type="text/javascript"
       src="{{url_for('static', filename='autocomplete.js')}}"
     ></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       type="text/javascript"
